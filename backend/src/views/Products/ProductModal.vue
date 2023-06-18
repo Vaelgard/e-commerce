@@ -20,7 +20,7 @@
                        class="absolute left-0 top-0 bg-white right-0 bottom-0 flex items-center justify-center"/>
               <header class="py-3 px-4 flex justify-between items-center">
                 <DialogTitle as="h3" class="text-lg leading-6 font-medium text-gray-900">
-                  {{ product.id ? `Update product: "${props.product.title}"` : 'Create new Product' }}
+                  {{ product.id ? `Update product: "${props.product.title}"` : 'Cree un nouveau produit' }}
                 </DialogTitle>
                 <button
                   @click="closeModal()"
@@ -44,11 +44,11 @@
               </header>
               <form @submit.prevent="onSubmit">
                 <div class="bg-white px-4 pt-5 pb-4">
-                  <CustomInput class="mb-2" v-model="product.title" label="Product Title"/>
-                  <CustomInput type="file" class="mb-2" label="Product Image" @change="file => product.image = file"/>
+                  <CustomInput class="mb-2" v-model="product.title" label="Nom du produit"/>
+                  <CustomInput type="file" class="mb-2" label="Image" @change="file => product.image = file"/>
                   <CustomInput type="textarea" class="mb-2" v-model="product.description" label="Description"/>
-                  <CustomInput type="number" class="mb-2" v-model="product.price" label="Price" prepend="$"/>
-                  <CustomInput type="checkbox" class="mb-2" v-model="product.published" label="Published"/>
+                  <CustomInput type="number" class="mb-2" v-model="product.price" label="Prix" prepend="DH"/>
+                  <CustomInput type="checkbox" class="mb-2" v-model="product.published" label="Publier"/>
                 </div>
                 <footer class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
                   <button type="submit"
